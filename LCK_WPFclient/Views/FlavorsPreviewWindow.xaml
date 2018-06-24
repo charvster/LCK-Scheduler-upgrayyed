@@ -1,0 +1,23 @@
+﻿<Window x:Class="LCK_WPFclient.Views.FlavorsPreviewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="FlavorsPreviewWindow" Height="250" Width="650"
+        WindowStyle="None" ShowInTaskbar="False" AllowsTransparency="True" >
+    <Grid Name="grdMain">
+        <ListBox ItemsSource="{Binding Flavors}" SelectedItem="{Binding Selected}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="1,1,1,1">
+                        <Label Content="{Binding Name}" Width="150" Height="27" MouseLeftButtonUp="Flavor_Click"/>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Width="645" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
+</Window>

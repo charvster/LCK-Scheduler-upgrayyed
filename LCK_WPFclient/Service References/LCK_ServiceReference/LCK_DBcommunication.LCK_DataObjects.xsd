@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfFlavor">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Flavor" nillable="true" type="tns:Flavor" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlavor" nillable="true" type="tns:ArrayOfFlavor" />
+  <xs:complexType name="Flavor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Flavor" nillable="true" type="tns:Flavor" />
+  <xs:complexType name="ArrayOfBatch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Batch" nillable="true" type="tns:Batch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBatch" nillable="true" type="tns:ArrayOfBatch" />
+  <xs:complexType name="Batch">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Day_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Flavor" nillable="true" type="tns:Flavor" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+      <xs:element minOccurs="0" name="Requested" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Store" nillable="true" type="tns:StoreInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Batch" nillable="true" type="tns:Batch" />
+  <xs:complexType name="StoreInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StoreInfo" nillable="true" type="tns:StoreInfo" />
+  <xs:complexType name="SpecialOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Batches" nillable="true" type="tns:ArrayOfSO_Batch" />
+      <xs:element minOccurs="0" name="Customer_Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Customer_Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Customer_Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Day_Number" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deliver" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DueTime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="LastModified" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScanLink" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SpecialInstructions" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Store" nillable="true" type="tns:StoreInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SpecialOrder" nillable="true" type="tns:SpecialOrder" />
+  <xs:complexType name="ArrayOfSO_Batch">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SO_Batch" nillable="true" type="tns:SO_Batch" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSO_Batch" nillable="true" type="tns:ArrayOfSO_Batch" />
+  <xs:complexType name="SO_Batch">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Batch">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Is_Mini" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SO_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Special_Instructions" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SO_Batch" nillable="true" type="tns:SO_Batch" />
+  <xs:complexType name="ArrayOfSpecialOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SpecialOrder" nillable="true" type="tns:SpecialOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSpecialOrder" nillable="true" type="tns:ArrayOfSpecialOrder" />
+  <xs:complexType name="ArrayOfDayPreview">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DayPreview" nillable="true" type="tns:DayPreview" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDayPreview" nillable="true" type="tns:ArrayOfDayPreview" />
+  <xs:complexType name="DayPreview">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DailyFlavorCount" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="SO_Qty" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DayPreview" nillable="true" type="tns:DayPreview" />
+  <xs:complexType name="DayInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DayNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Flavors" nillable="true" type="tns:ArrayOfFlavor" />
+      <xs:element minOccurs="0" name="Orders" nillable="true" type="tns:ArrayOfSpecialOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DayInfo" nillable="true" type="tns:DayInfo" />
+  <xs:complexType name="ArrayOfStoreInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoreInfo" nillable="true" type="tns:StoreInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoreInfo" nillable="true" type="tns:ArrayOfStoreInfo" />
+</xs:schema>

@@ -1,0 +1,144 @@
+7/24/2017 01:12:35.054 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetAllStoreInfo() - Error msg:Object reference not set to an instance of an object.
+7/24/2017 01:12:53.707 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetAllStoreInfo() - Error msg:Object reference not set to an instance of an object.
+7/24/2017 01:13:16.921 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetAllStoreInfo() - Error msg:Object reference not set to an instance of an object.
+7/24/2017 01:14:46.089 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetAllStoreInfo() - Error msg:Object reference not set to an instance of an object.
+8/7/2017 12:40:45.331 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:40:45.335 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:40:48.303 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:40:48.304 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:40:55.839 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:40:55.840 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:45:41.334 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:45:41.337 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:45:45.866 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:45:45.868 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:46:02.666 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:46:02.667 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:46:51.505 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:46:51.507 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:47:13.548 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:47:13.549 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:48:12.430 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:48:12.432 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:48:30.644 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:48:30.645 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:49:57.696 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:49:57.716 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:50:01.144 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:50:01.163 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:51:04.461 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:51:04.478 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:51:19.843 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Index was outside the bounds of the array.
+8/7/2017 12:54:32.175 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Input string was not in a correct format.
+8/7/2017 12:54:32.196 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Input string was not in a correct format.
+8/7/2017 12:54:37.539 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Input string was not in a correct format.
+8/7/2017 12:54:37.567 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetSOBatches(int) - Error msg:Input string was not in a correct format.
+8/7/2017 12:55:57.051 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetBatches(int,str) - Error msg:Input string was not in a correct format.
+8/26/2017 11:33:18.819 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:33:31.805 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:35:47.400 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:38:19.202 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:43:19.392 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:48:19.605 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:53:19.772 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:54:44.469 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:54:50.460 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:54:55.932 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:55:21.245 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:56:22.457 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:58:00.049 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 11:58:19.534 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:58:25.311 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:59:12.041 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:59:16.873 AM[Debug] [LCK_ServiceLibrary.LCK_Service] - DownloadFileFromServer(DownloadRequest) - Error msg:File not found
+8/26/2017 11:59:45.373 AM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+8/26/2017 12:12:52.059 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:13:05.882 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:21:40.276 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:22:25.758 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:24:02.402 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:24:07.050 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:27:15.465 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:27:18.206 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:32:58.927 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:33:00.938 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:33:34.337 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:33:37.178 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:33:59.547 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:34:09.290 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:34:11.178 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:39:53.081 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:40:17.900 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:40:20.184 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:40:35.347 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:40:37.367 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:40:54.362 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:41:01.276 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:41:06.492 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:41:08.213 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:41:51.203 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:41:52.891 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:42:05.943 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:42:07.906 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:42:32.250 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:42:47.051 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:42:48.745 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:46:07.999 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:46:09.847 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:46:25.150 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:46:26.702 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:46:52.685 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:49:32.434 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:49:34.302 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:50:08.814 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:50:26.279 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:50:36.723 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:50:38.724 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:51:15.233 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:51:16.590 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:51:41.233 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:51:42.818 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:51:54.365 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:51:56.163 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:52:06.732 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:58:30.413 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:58:35.579 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:58:51.826 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:58:54.886 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:59:20.164 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 01:59:21.715 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:07:10.489 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:07:12.359 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:09:58.513 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:10:00.297 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:10:21.879 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:10:23.314 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:16:04.450 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:16:06.044 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:18:35.610 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:18:50.783 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:19:10.011 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:19:11.642 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:20:03.316 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:20:10.155 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:28:13.707 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:31:58.611 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:32:13.650 PM[Debug] [LCK_DBcommunication.LCK_DB] - AddNewOrder(NewOrder) - Error msg:No current row
+4/2/2018 02:32:27.539 PM[Debug] [LCK_DBcommunication.LCK_DB] - AddNewOrder(NewOrder) - Error msg:No current row
+4/2/2018 02:33:18.792 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:34:08.021 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:34:09.531 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:34:37.109 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:34:38.744 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:34:57.935 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:34:59.732 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:36:36.074 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:36:37.415 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:37:49.308 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:37:51.182 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:38:11.624 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:38:13.257 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:44:32.379 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/2/2018 02:44:34.769 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/3/2018 01:03:52.583 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row
+4/3/2018 01:03:58.565 PM[Debug] [LCK_DBcommunication.LCK_DB] - GetFlavor(int) - Error msg:No current row

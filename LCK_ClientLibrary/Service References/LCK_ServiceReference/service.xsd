@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" />
+  <xs:import namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="GetAllFlavors">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllFlavorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetAllFlavorsResult" nillable="true" type="q1:ArrayOfFlavor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCakes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCakesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetAllCakesResult" nillable="true" type="q2:ArrayOfCake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BatchID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetBatchResult" nillable="true" type="q3:Batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatches">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StoreID" type="xs:int" />
+        <xs:element minOccurs="0" name="DayNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBatchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetBatchesResult" nillable="true" type="q4:ArrayOfBatch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDailyFlavors">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StoreID" type="xs:int" />
+        <xs:element minOccurs="0" name="DayNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDailyFlavorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetDailyFlavorsResult" nillable="true" type="q5:ArrayOfBatch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStoreInfoByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StoreID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStoreInfoByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetStoreInfoByIDResult" nillable="true" type="q6:StoreInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStoreInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStoreInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetStoreInfoResult" nillable="true" type="q7:StoreInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SO_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetSpecialOrderResult" nillable="true" type="q8:SpecialOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastSpecialOrderID">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastSpecialOrderIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLastSpecialOrderIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StoreID" type="xs:int" />
+        <xs:element minOccurs="0" name="DayNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSpecialOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetSpecialOrdersResult" nillable="true" type="q9:ArrayOfSpecialOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDayInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StoreID" type="xs:int" />
+        <xs:element minOccurs="0" name="DayNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDayInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetDayInfoResult" nillable="true" type="q10:DayInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDayInfoAll">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DayNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDayInfoAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetDayInfoAllResult" nillable="true" type="q11:DayInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStoresInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllStoresInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetAllStoresInfoResult" nillable="true" type="q12:ArrayOfStoreInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewOrders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNewOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="GetNewOrdersResult" nillable="true" type="q13:ArrayOfNewOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="bat" nillable="true" type="q14:Batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddBatchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFlavor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="flav" nillable="true" type="q15:Flavor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFlavorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddFlavorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="cke" nillable="true" type="q16:Cake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCakeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddCakeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSpecialOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="SO" nillable="true" type="q17:SpecialOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSpecialOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSpecialOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSpecialOrderBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SO_ID" type="xs:int" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="batch" nillable="true" type="q18:SO_Batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSpecialOrderBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSpecialOrderBatchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSpecialOrderCakeBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SO_ID" type="xs:int" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="cakeBatch" nillable="true" type="q19:Cake_Batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSpecialOrderCakeBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddSpecialOrderCakeBatchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="Store" nillable="true" type="q20:StoreInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddStoreResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="newOrder" nillable="true" type="q21:NewOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddNewOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddNewOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSpecialOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SO_ID" type="xs:int" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="updatedSO" nillable="true" type="q22:SpecialOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSpecialOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSpecialOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSpecialOrderBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SO_ID" type="xs:int" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="updatedBatch" nillable="true" type="q23:SO_Batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSpecialOrderBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateSpecialOrderBatchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Batch_ID" type="xs:int" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="updatedBatch" nillable="true" type="q24:Batch" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateBatchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFlavor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flavor_ID" type="xs:int" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="updatedFlavor" nillable="true" type="q25:Flavor" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFlavorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateFlavorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cake_ID" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="updateCake" nillable="true" type="q26:Cake" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCakeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateCakeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Store_ID" type="xs:int" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="updatedStore" nillable="true" type="q27:StoreInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateStoreResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNewOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewOrder_ID" type="xs:int" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" minOccurs="0" name="updatedNewOrder" nillable="true" type="q28:NewOrder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateNewOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateNewOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSpecialOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SO_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSpecialOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSpecialOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllSpecialOrders">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllSpecialOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAllSpecialOrdersResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSpecialOrderBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Batch_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSpecialOrderBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSpecialOrderBatchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBatch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Batch_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteBatchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteBatchResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllBatches">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllBatchesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAllBatchesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFlavor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Flavor_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFlavorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteFlavorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllFlavors">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAllFlavorsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteAllFlavorsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCake">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Cake_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCakeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteCakeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStore">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Store_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteStoreResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteStoreResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteNewOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="NewOrder_ID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteNewOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteNewOrderResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DownloadRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoteFileInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.microsoft.com/Message" name="FileByteStream" type="q29:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FileName" nillable="true" type="xs:string" />
+  <xs:element name="Length" type="xs:long" />
+</xs:schema>

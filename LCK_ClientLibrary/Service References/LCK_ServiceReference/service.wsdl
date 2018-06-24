@@ -1,0 +1,803 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LCK_Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LCK_DBcommunication.LCK_DataObjects" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILCK_Service_GetAllFlavors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFlavors" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetAllFlavors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFlavorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetAllCakes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCakes" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetAllCakes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCakesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetBatches_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatches" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetBatches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetDailyFlavors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDailyFlavors" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetDailyFlavors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDailyFlavorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetStoreInfoByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreInfoByID" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetStoreInfoByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreInfoByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetStoreInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetStoreInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStoreInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetSpecialOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetSpecialOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetLastSpecialOrderID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastSpecialOrderID" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetLastSpecialOrderID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastSpecialOrderIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetSpecialOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialOrders" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetSpecialOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSpecialOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetDayInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDayInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetDayInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDayInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetDayInfoAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDayInfoAll" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetDayInfoAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDayInfoAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetAllStoresInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStoresInfo" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetAllStoresInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllStoresInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetNewOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewOrders" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_GetNewOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNewOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddFlavor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFlavor" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddFlavor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFlavorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddCake_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCake" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddCake_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCakeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddSpecialOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpecialOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddSpecialOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpecialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddSpecialOrderBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpecialOrderBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddSpecialOrderBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpecialOrderBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddSpecialOrderCakeBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpecialOrderCakeBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddSpecialOrderCakeBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSpecialOrderCakeBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddStore" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddNewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_AddNewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddNewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateSpecialOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpecialOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateSpecialOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpecialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateSpecialOrderBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpecialOrderBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateSpecialOrderBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSpecialOrderBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateFlavor_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlavor" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateFlavor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFlavorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateCake_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCake" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateCake_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCakeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStore" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateNewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UpdateNewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateNewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteSpecialOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSpecialOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteSpecialOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSpecialOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteAllSpecialOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllSpecialOrders" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteAllSpecialOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllSpecialOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteSpecialOrderBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSpecialOrderBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteSpecialOrderBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSpecialOrderBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteBatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBatch" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteBatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteAllBatches_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllBatches" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteAllBatches_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllBatchesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteFlavor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFlavor" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteFlavor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFlavorResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteAllFlavors_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllFlavors" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteAllFlavors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAllFlavorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteCake_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCake" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteCake_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCakeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteStore_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStore" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteStore_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteNewOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNewOrder" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_DeleteNewOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNewOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadRequest">
+    <wsdl:part name="parameters" element="tns:DownloadRequest" />
+  </wsdl:message>
+  <wsdl:message name="RemoteFileInfo">
+    <wsdl:part name="parameters" element="tns:RemoteFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="RemoteFileInfo_Headers">
+    <wsdl:part name="FileName" element="tns:FileName" />
+    <wsdl:part name="Length" element="tns:Length" />
+  </wsdl:message>
+  <wsdl:message name="ILCK_Service_UploadFileToServer_OutputMessage" />
+  <wsdl:portType name="ILCK_Service">
+    <wsdl:operation name="GetAllFlavors">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetAllFlavors" message="tns:ILCK_Service_GetAllFlavors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetAllFlavorsResponse" message="tns:ILCK_Service_GetAllFlavors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCakes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetAllCakes" message="tns:ILCK_Service_GetAllCakes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetAllCakesResponse" message="tns:ILCK_Service_GetAllCakes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetBatch" message="tns:ILCK_Service_GetBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetBatchResponse" message="tns:ILCK_Service_GetBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBatches">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetBatches" message="tns:ILCK_Service_GetBatches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetBatchesResponse" message="tns:ILCK_Service_GetBatches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyFlavors">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetDailyFlavors" message="tns:ILCK_Service_GetDailyFlavors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetDailyFlavorsResponse" message="tns:ILCK_Service_GetDailyFlavors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreInfoByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetStoreInfoByID" message="tns:ILCK_Service_GetStoreInfoByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetStoreInfoByIDResponse" message="tns:ILCK_Service_GetStoreInfoByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetStoreInfo" message="tns:ILCK_Service_GetStoreInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetStoreInfoResponse" message="tns:ILCK_Service_GetStoreInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetSpecialOrder" message="tns:ILCK_Service_GetSpecialOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetSpecialOrderResponse" message="tns:ILCK_Service_GetSpecialOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSpecialOrderID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetLastSpecialOrderID" message="tns:ILCK_Service_GetLastSpecialOrderID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetLastSpecialOrderIDResponse" message="tns:ILCK_Service_GetLastSpecialOrderID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetSpecialOrders" message="tns:ILCK_Service_GetSpecialOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetSpecialOrdersResponse" message="tns:ILCK_Service_GetSpecialOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDayInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetDayInfo" message="tns:ILCK_Service_GetDayInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetDayInfoResponse" message="tns:ILCK_Service_GetDayInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDayInfoAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetDayInfoAll" message="tns:ILCK_Service_GetDayInfoAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetDayInfoAllResponse" message="tns:ILCK_Service_GetDayInfoAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStoresInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetAllStoresInfo" message="tns:ILCK_Service_GetAllStoresInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetAllStoresInfoResponse" message="tns:ILCK_Service_GetAllStoresInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/GetNewOrders" message="tns:ILCK_Service_GetNewOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/GetNewOrdersResponse" message="tns:ILCK_Service_GetNewOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddBatch" message="tns:ILCK_Service_AddBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddBatchResponse" message="tns:ILCK_Service_AddBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFlavor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddFlavor" message="tns:ILCK_Service_AddFlavor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddFlavorResponse" message="tns:ILCK_Service_AddFlavor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCake">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddCake" message="tns:ILCK_Service_AddCake_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddCakeResponse" message="tns:ILCK_Service_AddCake_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSpecialOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddSpecialOrder" message="tns:ILCK_Service_AddSpecialOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddSpecialOrderResponse" message="tns:ILCK_Service_AddSpecialOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSpecialOrderBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddSpecialOrderBatch" message="tns:ILCK_Service_AddSpecialOrderBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddSpecialOrderBatchResponse" message="tns:ILCK_Service_AddSpecialOrderBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSpecialOrderCakeBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddSpecialOrderCakeBatch" message="tns:ILCK_Service_AddSpecialOrderCakeBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddSpecialOrderCakeBatchResponse" message="tns:ILCK_Service_AddSpecialOrderCakeBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddStore" message="tns:ILCK_Service_AddStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddStoreResponse" message="tns:ILCK_Service_AddStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddNewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/AddNewOrder" message="tns:ILCK_Service_AddNewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/AddNewOrderResponse" message="tns:ILCK_Service_AddNewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpecialOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UpdateSpecialOrder" message="tns:ILCK_Service_UpdateSpecialOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UpdateSpecialOrderResponse" message="tns:ILCK_Service_UpdateSpecialOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpecialOrderBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UpdateSpecialOrderBatch" message="tns:ILCK_Service_UpdateSpecialOrderBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UpdateSpecialOrderBatchResponse" message="tns:ILCK_Service_UpdateSpecialOrderBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UpdateBatch" message="tns:ILCK_Service_UpdateBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UpdateBatchResponse" message="tns:ILCK_Service_UpdateBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlavor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UpdateFlavor" message="tns:ILCK_Service_UpdateFlavor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UpdateFlavorResponse" message="tns:ILCK_Service_UpdateFlavor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCake">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UpdateCake" message="tns:ILCK_Service_UpdateCake_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UpdateCakeResponse" message="tns:ILCK_Service_UpdateCake_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UpdateStore" message="tns:ILCK_Service_UpdateStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UpdateStoreResponse" message="tns:ILCK_Service_UpdateStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UpdateNewOrder" message="tns:ILCK_Service_UpdateNewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UpdateNewOrderResponse" message="tns:ILCK_Service_UpdateNewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpecialOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteSpecialOrder" message="tns:ILCK_Service_DeleteSpecialOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteSpecialOrderResponse" message="tns:ILCK_Service_DeleteSpecialOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSpecialOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteAllSpecialOrders" message="tns:ILCK_Service_DeleteAllSpecialOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteAllSpecialOrdersResponse" message="tns:ILCK_Service_DeleteAllSpecialOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpecialOrderBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteSpecialOrderBatch" message="tns:ILCK_Service_DeleteSpecialOrderBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteSpecialOrderBatchResponse" message="tns:ILCK_Service_DeleteSpecialOrderBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteBatch" message="tns:ILCK_Service_DeleteBatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteBatchResponse" message="tns:ILCK_Service_DeleteBatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllBatches">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteAllBatches" message="tns:ILCK_Service_DeleteAllBatches_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteAllBatchesResponse" message="tns:ILCK_Service_DeleteAllBatches_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFlavor">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteFlavor" message="tns:ILCK_Service_DeleteFlavor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteFlavorResponse" message="tns:ILCK_Service_DeleteFlavor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllFlavors">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteAllFlavors" message="tns:ILCK_Service_DeleteAllFlavors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteAllFlavorsResponse" message="tns:ILCK_Service_DeleteAllFlavors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCake">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteCake" message="tns:ILCK_Service_DeleteCake_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteCakeResponse" message="tns:ILCK_Service_DeleteCake_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStore">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteStore" message="tns:ILCK_Service_DeleteStore_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteStoreResponse" message="tns:ILCK_Service_DeleteStore_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNewOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DeleteNewOrder" message="tns:ILCK_Service_DeleteNewOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DeleteNewOrderResponse" message="tns:ILCK_Service_DeleteNewOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileFromServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/DownloadFileFromServer" name="DownloadRequest" message="tns:DownloadRequest" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/DownloadFileFromServerResponse" name="RemoteFileInfo" message="tns:RemoteFileInfo" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileToServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILCK_Service/UploadFileToServer" name="RemoteFileInfo" message="tns:RemoteFileInfo" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILCK_Service/UploadFileToServerResponse" message="tns:ILCK_Service_UploadFileToServer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILCK_Service" type="tns:ILCK_Service">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllFlavors">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetAllFlavors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCakes">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetAllCakes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBatches">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetBatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDailyFlavors">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetDailyFlavors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreInfoByID">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetStoreInfoByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStoreInfo">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetStoreInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialOrder">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetSpecialOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastSpecialOrderID">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetLastSpecialOrderID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSpecialOrders">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetSpecialOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDayInfo">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetDayInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDayInfoAll">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetDayInfoAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllStoresInfo">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetAllStoresInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewOrders">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/GetNewOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFlavor">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddFlavor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCake">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddCake" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSpecialOrder">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddSpecialOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSpecialOrderBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddSpecialOrderBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSpecialOrderCakeBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddSpecialOrderCakeBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStore">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddNewOrder">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/AddNewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpecialOrder">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UpdateSpecialOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSpecialOrderBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UpdateSpecialOrderBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UpdateBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFlavor">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UpdateFlavor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCake">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UpdateCake" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStore">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UpdateStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateNewOrder">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UpdateNewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpecialOrder">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteSpecialOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllSpecialOrders">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteAllSpecialOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSpecialOrderBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteSpecialOrderBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBatch">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteBatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllBatches">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteAllBatches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFlavor">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteFlavor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAllFlavors">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteAllFlavors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCake">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteCake" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStore">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteStore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNewOrder">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DeleteNewOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadFileFromServer">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/DownloadFileFromServer" style="document" />
+      <wsdl:input name="DownloadRequest">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RemoteFileInfo">
+        <soap:header message="tns:RemoteFileInfo_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:RemoteFileInfo_Headers" part="Length" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadFileToServer">
+      <soap:operation soapAction="http://tempuri.org/ILCK_Service/UploadFileToServer" style="document" />
+      <wsdl:input name="RemoteFileInfo">
+        <soap:header message="tns:RemoteFileInfo_Headers" part="FileName" use="literal" />
+        <soap:header message="tns:RemoteFileInfo_Headers" part="Length" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LCK_Service">
+    <wsdl:port name="BasicHttpBinding_ILCK_Service" binding="tns:BasicHttpBinding_ILCK_Service">
+      <soap:address location="http://localhost:6790/lck" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

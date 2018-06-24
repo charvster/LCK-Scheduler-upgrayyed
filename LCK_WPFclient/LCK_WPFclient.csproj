@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA1180A1-4333-40CE-9868-92B08FC2510C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LCK_WPFclient</RootNamespace>
+    <AssemblyName>LCK Scheduler</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>unicorn-poop-rainbow-cupcake_large.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PdfSharp, Version=1.0.898.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WpfControls, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfControls.AutoCompleteTextBox.1.0.0.7\lib\net35\WpfControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ConfigSettings.cs" />
+    <Compile Include="CustomControls\DropdownMulti.xaml.cs">
+      <DependentUpon>DropdownMulti.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\DropdownMulti_CakeOnly.xaml.cs">
+      <DependentUpon>DropdownMulti_CakeOnly.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Logging.cs" />
+    <Compile Include="NewOrdersManager.cs" />
+    <Compile Include="Views\AddFlavorWindow.xaml.cs">
+      <DependentUpon>AddFlavorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CakeEditorWindow.xaml.cs">
+      <DependentUpon>CakeEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FlavorEditorWindow.xaml.cs">
+      <DependentUpon>FlavorEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FlavorsPreviewWindow.xaml.cs">
+      <DependentUpon>FlavorsPreviewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GeneratePDFWindow.xaml.cs">
+      <DependentUpon>GeneratePDFWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewOrdersWindow.xaml.cs">
+      <DependentUpon>NewOrdersWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WCF_CommManager.cs" />
+    <Compile Include="ObservableObject.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="Views\DayPreviewView.xaml.cs">
+      <DependentUpon>DayPreviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DayView.xaml.cs">
+      <DependentUpon>DayView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialOrderPreviewView.xaml.cs">
+      <DependentUpon>SpecialOrderPreviewView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecialOrderWindow.xaml.cs">
+      <DependentUpon>SpecialOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CustomControls\DropdownMulti.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControls\DropdownMulti_CakeOnly.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Views\AddFlavorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CakeEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DayPreviewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DayView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FlavorEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FlavorsPreviewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\GeneratePDFWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewOrdersWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SpecialOrderPreviewView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SpecialOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\LCK_ClientLibrary.LCK_ServiceReference.Batch.datasource" />
+    <None Include="Properties\DataSources\LCK_ClientLibrary.LCK_ServiceReference.Cake.datasource" />
+    <None Include="Properties\DataSources\LCK_ClientLibrary.LCK_ServiceReference.DayInfo.datasource" />
+    <None Include="Properties\DataSources\LCK_ClientLibrary.LCK_ServiceReference.Flavor.datasource" />
+    <None Include="Properties\DataSources\LCK_ClientLibrary.LCK_ServiceReference.SpecialOrder.datasource" />
+    <None Include="Properties\DataSources\LCK_ClientLibrary.LCK_ServiceReference.StoreInfo.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\minus.png" />
+    <Resource Include="images\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LCK_ClientLibrary\LCK_ClientLibrary.csproj">
+      <Project>{fe0b1b1e-80d4-435c-b024-4a95d281e0ac}</Project>
+      <Name>LCK_ClientLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Release Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unicorn-poop-rainbow-cupcake.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\arrow_down.png" />
+    <Resource Include="images\arrow_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="images\splash-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="unicorn-poop-rainbow-cupcake_large.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo F|xcopy "$(ProjectDir)Release Notes.txt" "$(TargetDir)Release Notes.txt" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,7 @@
+﻿
+v1.1 - Release ##/##/####
+	- added new field to NewOrder object, editted - 4/2/2018
+
+************************************
+
+v1.0 Initial Release [##/##/####]

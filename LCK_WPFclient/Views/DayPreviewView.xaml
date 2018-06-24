@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="LCK_WPFclient.Views.DayPreviewView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="170" Width="196" MouseLeftButtonUp="mouseLtUp_ControlClicked">
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="0,0,0,0">
+            <Grid>
+                <Label Content="{Binding DisplayDateShort}" Height="40" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Margin="0,-3,0,0" HorizontalContentAlignment="Center"/>
+                <Label Content="Flavor Total:" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="131" Margin="0,22,0,0" FontSize="22"/>
+                <Label Content="{Binding DailyBatchCount}" Height="37" VerticalAlignment="Top" Margin="131,23,0,0" FontSize="22"/>
+                <Label Content="Full:" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="126" Margin="0,50,0,0" FontSize="22"/>
+                <Label Content="{Binding FullSizeCount}" Height="37" VerticalAlignment="Top" Margin="131,50,0,0" FontSize="22"/>
+                <Label Content="Minis:" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="131" Margin="0,75,0,0" FontSize="22"/>
+                <Label Content="{Binding MiniSizeCount}" Height="37" VerticalAlignment="Top" Margin="131,77,0,0" FontSize="22"/>
+                <Label Content="Cakes:" HorizontalAlignment="Left" Height="37" VerticalAlignment="Top" Width="126" Margin="0,100,0,0" FontSize="22"/>
+                <Label Content="{Binding CakeCount}" Height="37" VerticalAlignment="Top" Margin="131,102,0,0" FontSize="22"/>
+                <Label Content="" Margin="0,137,0,1"/>
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

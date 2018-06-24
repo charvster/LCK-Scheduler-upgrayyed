@@ -1,0 +1,18 @@
+﻿<Window x:Class="LCK_DatabaseImporter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Old Access Database Exporter" Height="350" Width="454.757" ResizeMode="NoResize">
+    <Grid>
+        <Label Content="Old Access db filepath" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="143"/>
+        <ListBox Name="lvwLog" Margin="163,89,10,10"/>
+        <TextBox Name="txtOldDB" HorizontalAlignment="Left" Height="48" Margin="10,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="427"/>
+        <Button Content="Browse" Click="btnBrowse_Click" HorizontalAlignment="Left" Height="21" Margin="369,10,0,0" VerticalAlignment="Top" Width="68"/>
+        <Button Content="Export" Click="btnExport_Click" HorizontalAlignment="Left" Height="33" Margin="10,200,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button Content="Close" Click="btnClose_Cick" HorizontalAlignment="Left" Height="33" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="106"/>
+        <Label Content="Included Tables" HorizontalAlignment="Left" Height="26" Margin="10,89,0,0" VerticalAlignment="Top" Width="106"/>
+        <CheckBox Name="chkFlavors" Content="Flavors" HorizontalAlignment="Left" Height="18" Margin="25,115,0,0" VerticalAlignment="Top" Width="128"/>
+        <CheckBox Name="chkBatch" Content="Batch" HorizontalAlignment="Left" Height="18" Margin="25,133,0,0" VerticalAlignment="Top" Width="128"/>
+        <CheckBox Name="chkSO" Content="Special_Orders" HorizontalAlignment="Left" Height="18" Margin="25,151,0,0" VerticalAlignment="Top" Width="128"/>
+        <CheckBox Name="chkSO_Batch" Content="SpecialOrder_Batch" HorizontalAlignment="Left" Height="18" Margin="25,169,0,0" VerticalAlignment="Top" Width="128"/>
+    </Grid>
+</Window>

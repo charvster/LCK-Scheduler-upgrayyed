@@ -1,0 +1,31 @@
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_ServiceLibrary.dll
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_DBcommunication.dll
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\System.Data.SQLite.dll
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_ServiceLibrary.pdb
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_DBcommunication.pdb
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\System.Data.SQLite.xml
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK_WCFsysTrayHost.csprojResolveAssemblyReference.cache
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK_WCFsysTrayHost.Properties.Resources.resources
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK_WCFsysTrayHost.csproj.GenerateResource.Cache
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK WCF Service Host.exe.config
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK WCF Service Host.exe
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK WCF Service Host.pdb
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK WCF Service Host.exe
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK WCF Service Host.pdb
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK WCF Service Host.exe.config
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK WCF Service Host.exe
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK WCF Service Host.pdb
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK WCF Service Host.exe
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK WCF Service Host.pdb
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_ServiceLibrary.dll
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_DBcommunication.dll
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\System.Data.SQLite.dll
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_ServiceLibrary.pdb
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK_DBcommunication.pdb
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\System.Data.SQLite.xml
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK_WCFsysTrayHost.csprojResolveAssemblyReference.cache
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK_WCFsysTrayHost.Properties.Resources.resources
+E:\LCCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK_WCFsysTrayHost.csproj.GenerateResource.Cache
+F:\Consulting\LCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\bin\Debug\LCK WCF Service Host.exe.config
+F:\Consulting\LCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK WCF Service Host.exe
+F:\Consulting\LCK\Scheduler upgrade\development\LCK_WCFsysTrayHost\obj\Debug\LCK WCF Service Host.pdb

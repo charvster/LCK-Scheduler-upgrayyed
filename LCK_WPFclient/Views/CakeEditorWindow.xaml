@@ -1,0 +1,32 @@
+﻿<Window x:Class="LCK_WPFclient.Views.CakeEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cake Editor" Height="361" Width="700" ResizeMode="NoResize">
+    <Grid>
+        <ListView Name="lvwCakes" Margin="208,10,10,12" SelectionChanged="lvwCakes_SelectionChanged"
+                  ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
+            <ListView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Delete" Click="mnuDelete_Click"/>
+                </ContextMenu>
+            </ListView.ContextMenu>
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Name" Width="{Binding ElementName=lvwCakes, Path=(ActualWidth/6)*2}" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="Adv" Width="{Binding ElementName=lvwCakes, Path=ActualWidth/6}" DisplayMemberBinding="{Binding AbvName}"/>
+                    <GridViewColumn Header="Description" Width="{Binding ElementName=lvwCakes, Path=(ActualWidth/6)*3}" DisplayMemberBinding="{Binding Description}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Name:" HorizontalAlignment="Left" Height="25" Margin="10,0,0,298" VerticalAlignment="Bottom" Width="52"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="25" Margin="10,0,0,273" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="110"/>
+        <Label Content="Descripton:" HorizontalAlignment="Left" Height="25" Margin="10,0,0,243" VerticalAlignment="Bottom" Width="74"/>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="128" Margin="10,0,0,110" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="193"/>
+        <Button Content="Close" HorizontalAlignment="Left" Height="27" Margin="10,0,0,12" VerticalAlignment="Bottom" Width="52" Click="btnClose_Click"/>
+        <Button Name="btnAdd_Update" Content="Add" Height="27" Margin="10,0,0,78" VerticalAlignment="Bottom" Click="btnAdd_Update_Click" HorizontalAlignment="Left" Width="52"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Height="27" Margin="151,0,0,78" VerticalAlignment="Bottom" Width="52" Click="btnClear_Click"/>
+        <Label Content="Abv:" HorizontalAlignment="Left" Height="25" Margin="140,0,0,298" VerticalAlignment="Bottom" Width="52"/>
+        <TextBox x:Name="txtAbv" HorizontalAlignment="Left" Height="25" Margin="140,0,0,273" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="63"/>
+
+    </Grid>
+</Window>

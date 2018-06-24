@@ -1,0 +1,150 @@
+﻿<Window x:Class="LCK_WPFclient.Views.SpecialOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:global="clr-namespace:LCK_WPFclient"
+        xmlns:Custom="clr-namespace:LCK_WPFclient.CustomControls"
+        xmlns:convert="clr-namespace:LCK_WPFclient.Views"
+        Title="Special Order" ResizeMode="NoResize" Height="725" Width="1110" 
+        WindowStartupLocation="CenterScreen" MinHeight="725" MinWidth="1110" 
+        Closing="Window_Closing">
+    <Window.Resources>
+        <Style x:Key="IsEnabledStyle" TargetType="Control">
+            <Setter Property="IsEnabled" Value="{Binding IsEditable}" />
+        </Style>
+        <Style x:Key="ContextMenuStyle" TargetType="ContextMenu">
+            <Setter Property="Visibility" Value="Visible"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsEditable}" Value="False">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <convert:ZeroToHiddenConverter x:Key="contextConvert"/>
+    </Window.Resources>
+    <Grid>
+        <Grid>
+            <!--IsEnabled="{Binding IsEditable}">-->
+            <Label Content="Due Time:" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" VerticalAlignment="Top" Width="66"/>
+            <ComboBox Name="cboDueTime" SelectedItem="{Binding DueTimeUI}" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="30" Margin="80,10,0,0" VerticalAlignment="Top" Width="65" FontSize="16"/>
+            <Label Content="{Binding DisplayDate}" FontSize="18" HorizontalAlignment="Left" Height="48" Margin="145,4,0,0" VerticalAlignment="Top" Width="340" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+            <Label Content="Name:" HorizontalAlignment="Left" Height="26" Margin="134,50,0,0" VerticalAlignment="Top" Width="60"/>
+            <TextBox Text="{Binding Customer_Name}" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="26" Margin="200,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285"/>
+            <Label Content="Email:" HorizontalAlignment="Left" Height="26" Margin="134,81,0,0" VerticalAlignment="Top" Width="60"/>
+            <TextBox Text="{Binding Customer_Email}" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="26" Margin="200,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285"/>
+            <Label Content="Phone:" HorizontalAlignment="Left" Height="26" Margin="134,110,0,0" VerticalAlignment="Top" Width="60"/>
+            <TextBox Name="txtPhone" Text="{Binding Customer_Phone}" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="26" Margin="200,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285"/>
+            <Label HorizontalAlignment="Left" Height="26" Margin="134,141,0,0" VerticalAlignment="Top" Width="60" MouseDoubleClick="Address_doubleClick">
+                <Hyperlink NavigateUri="{Binding AddressLink}" RequestNavigate="Hyperlink_RequestNavigate">
+                    Address:
+                </Hyperlink>
+            </Label>
+            <TextBox Name="txtAddress" Text="{Binding Customer_Address}" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="26" Margin="200,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="110" Margin="10,55,0,0" VerticalAlignment="Top" Width="119">
+                <Grid IsEnabled="{Binding IsEditable}">
+                    <RadioButton Name="rdoPickUp" IsChecked="True" Content="Pick-up" Checked="rdoOptions_Check" HorizontalAlignment="Left" Height="20" Margin="4,34,0,0" VerticalAlignment="Top" Width="96"/>
+                    <ComboBox Name="cboStores" Height="27" Margin="5,2,5,0" VerticalAlignment="Top" FontSize="16"/>
+                    <RadioButton Name="rdoDropOff" Content="Drop-off" Checked="rdoOptions_Check" HorizontalAlignment="Left" Height="20" Margin="4,59,0,0" VerticalAlignment="Top" Width="96"/>
+                    <RadioButton Name="rdoDeliverSetup" Content="Deliver and Setup" Checked="rdoOptions_Check" HorizontalAlignment="Left" Height="20" Margin="4,83,0,0" VerticalAlignment="Top" Width="112"/>
+                </Grid>
+            </Border>
+            <GroupBox Header="Full Size (Choice of 2 flavors per dozen):" HorizontalAlignment="Left" Height="170" Margin="10,175,0,0" VerticalAlignment="Top" Width="235">
+                <Grid>
+                    <ListView Name="lvwSoBatchesFull" ToolTip="Right Click for Delete" Margin="5,37,0,5" HorizontalAlignment="Left" Width="218">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Qty" Width="40" DisplayMemberBinding="{Binding Quantity}"/>
+                                <GridViewColumn Header="Flavor" Width="150" DisplayMemberBinding="{Binding Flavor.Name}"/>
+                            </GridView>
+                        </ListView.View>
+                        <ListView.ContextMenu>
+                            <ContextMenu Style="{StaticResource ContextMenuStyle}">
+                                <MenuItem Header="Delete" Click="mnuDelete_Click"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                    </ListView>
+                    <Label Content="Qty:" HorizontalAlignment="Left" Height="27" Margin="1,1,0,0" VerticalAlignment="Top" Width="35"/>
+                    <TextBox Name="txtBatchAdd_Qty" HorizontalAlignment="Left" Height="24" Margin="30,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30"/>
+                    <!--<ComboBox Name="cboFlavors" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="24" Margin="65,3,0,0" VerticalAlignment="Top" Width="135"/>-->
+                    <Custom:DropdownMulti x:Name="ddmFlavor" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="25" Margin="62,3,0,0" VerticalAlignment="Top" Width="140"/>
+                    <Button Content="+" Click="btnSOBatchAdd_Click" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="24" Margin="205,3,0,0" VerticalAlignment="Top" Width="18"/>
+                </Grid>
+            </GroupBox>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="1" Margin="10,45,0,0" VerticalAlignment="Top" Width="475"/>
+            <GroupBox Header="Mini (Choice of 1 flavor per dozen):" HorizontalAlignment="Left" Height="170" Margin="250,175,0,0" VerticalAlignment="Top" Width="235">
+                <Grid>
+                    <ListView x:Name="lvwSoBatchesMini" ToolTip="Right Click for Delete" Margin="5,37,0,5" HorizontalAlignment="Left" Width="218">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Qty" Width="40" DisplayMemberBinding="{Binding QuantityMini}"/>
+                                <GridViewColumn Header="Flavor" Width="150" DisplayMemberBinding="{Binding Flavor.Name}"/>
+                            </GridView>
+                        </ListView.View>
+                        <ListView.ContextMenu>
+                            <ContextMenu Style="{StaticResource ContextMenuStyle}">
+                                <MenuItem Header="Delete" Click="mnuDeleteMini_Click"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                    </ListView>
+                    <Label Content="Qty:" HorizontalAlignment="Left" Height="27" Margin="1,1,0,0" VerticalAlignment="Top" Width="35"/>
+                    <TextBox x:Name="txtBatchMiniAdd_Qty" HorizontalAlignment="Left" Height="24" Margin="30,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="30"/>
+                    <!--<ComboBox x:Name="cboFlavorsMini" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="24" Margin="65,3,0,0" VerticalAlignment="Top" Width="135"/>-->
+                    <Custom:DropdownMulti x:Name="ddmFlavorMini" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="25" Margin="62,3,0,0" VerticalAlignment="Top" Width="140"/>
+                    <Button Content="+" Click="btnSOBatchMiniAdd_Click" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="25" Margin="205,3,0,0" VerticalAlignment="Top" Width="18"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Cake(s):" HorizontalAlignment="Left" Height="165" Margin="10,350,0,0" VerticalAlignment="Top" Width="289">
+                <Grid>
+                    <ListView x:Name="lvwCakes" ToolTip="Right Click for Delete" ItemsSource="{Binding Cakes}" Margin="5,55,0,0" HorizontalAlignment="Left" Width="272">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="Qty" Width="30" DisplayMemberBinding="{Binding Quantity}"/>
+                                <GridViewColumn Header="Type" Width="75" DisplayMemberBinding="{Binding Cake.AbvName}"/>
+                                <GridViewColumn Header="Flavor" Width="135" DisplayMemberBinding="{Binding Flavor.Name}"/>
+                            </GridView>
+                        </ListView.View>
+                        <ListView.ContextMenu>
+                            <ContextMenu Style="{StaticResource ContextMenuStyle}">
+                                <MenuItem Header="Delete" Click="mnuDeleteCake_Click"/>
+                            </ContextMenu>
+                        </ListView.ContextMenu>
+                    </ListView>
+                    <Label Content="Qty:" HorizontalAlignment="Left" Height="27" Margin="1,1,0,0" VerticalAlignment="Top" Width="35"/>
+                    <TextBox x:Name="txtCakeAdd_Qty" HorizontalAlignment="Left" Height="24" Margin="1,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="41"/>
+                    <Label Content="Flavor:" HorizontalAlignment="Left" Height="27" Margin="50,1,0,0" VerticalAlignment="Top" Width="50"/>
+                    <!--<ComboBox x:Name="cboCakeFlavors" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="24" Margin="105,3,0,0" VerticalAlignment="Top" Width="167"/>-->
+                    <Custom:DropdownMulti_CakeOnly x:Name="ddmCakeFlavors" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="25" Margin="105,1,0,0" VerticalAlignment="Top" Width="167"/>
+                    <Button Content="+" Click="btnCakeAdd_Click" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="24" Margin="254,29,0,0" VerticalAlignment="Top" Width="18"/>
+                    <Label Content="Type:" HorizontalAlignment="Left" Height="27" Margin="50,26,0,0" VerticalAlignment="Top" Width="50"/>
+                    <ComboBox x:Name="cboCakeTypes" Style="{StaticResource IsEnabledStyle}" HorizontalAlignment="Left" Height="24" Margin="105,29,0,0" VerticalAlignment="Top" Width="144"/>
+                </Grid>
+            </GroupBox>
+            <GroupBox Header="Displays Notes" Height="165" Margin="299,350,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="186">
+                <TextBox Margin="1,1,1,1" TextWrapping="Wrap" Text="{Binding DisplayNotes}" Style="{StaticResource IsEnabledStyle}"/>
+            </GroupBox>
+            <GroupBox Header="Special Instructions" Margin="10,520,0,0" HorizontalAlignment="Left" Width="475" Height="120" VerticalAlignment="Top">
+                <TextBox Margin="1,1,1,1" TextWrapping="Wrap" Text="{Binding SpecialInstructions}" Style="{StaticResource IsEnabledStyle}"/>
+            </GroupBox>
+            <GroupBox Header="Scanned Order [right click for Print option]" ToolTip="Right Click for Print" Margin="490,10,10,9">
+                <WebBrowser Name="webImage" Margin="2,2,2,2"/>
+                <!--<Image Name="imgScan" Margin="2,2,2,2">
+                    <Image.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Print" Click="mnuClickImage"/>
+                        </ContextMenu>
+                    </Image.ContextMenu>
+                </Image>-->
+            </GroupBox>
+            <Button Content="Upload PDF" HorizontalAlignment="Left" Height="35" Margin="385,0,0,10" VerticalAlignment="Bottom" Width="100" Click="btnUpload_Click" Style="{StaticResource IsEnabledStyle}"/>
+            <Button Content="Create PDF" HorizontalAlignment="Left" Height="35" Margin="275,0,0,10" VerticalAlignment="Bottom" Width="100" Click="btnCreatePDF_Click" Style="{StaticResource IsEnabledStyle}"/>
+        </Grid>
+        <Grid>
+            <Button Content="OK" HorizontalAlignment="Left" Margin="10,0,0,10" Width="58"  Click="btnOK_Click" Height="35" VerticalAlignment="Bottom"/>
+            <Button Content="Cancel" HorizontalAlignment="Left" Margin="87,0,0,10" Width="58" Click="btnCancel_Click" Height="35" VerticalAlignment="Bottom"/>
+            <TextBlock HorizontalAlignment="Left" Height="24" Margin="175,0,0,11" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="73">
+                <Hyperlink NavigateUri="{Binding AddressLink}" RequestNavigate="Hyperlink_RequestNavigate">
+                        Map Address
+                </Hyperlink>
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>

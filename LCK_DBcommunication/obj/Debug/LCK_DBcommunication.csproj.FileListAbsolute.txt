@@ -1,0 +1,14 @@
+E:\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\LCK_DBcommunication.dll
+E:\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\LCK_DBcommunication.pdb
+E:\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\System.Data.SQLite.dll
+E:\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\System.Data.SQLite.xml
+E:\LCCK\Scheduler upgrade\development\LCK_DBcommunication\obj\Debug\LCK_DBcommunication.csprojResolveAssemblyReference.cache
+E:\LCCK\Scheduler upgrade\development\LCK_DBcommunication\obj\Debug\LCK_DBcommunication.dll
+E:\LCCK\Scheduler upgrade\development\LCK_DBcommunication\obj\Debug\LCK_DBcommunication.pdb
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\LCK_DBcommunication.dll
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\LCK_DBcommunication.pdb
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\System.Data.SQLite.dll
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_DBcommunication\bin\Debug\System.Data.SQLite.xml
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_DBcommunication\obj\Debug\LCK_DBcommunication.dll
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_DBcommunication\obj\Debug\LCK_DBcommunication.pdb
+E:\Consulting\LCCK\Scheduler upgrade\development\LCK_DBcommunication\obj\Debug\LCK_DBcommunication.csprojResolveAssemblyReference.cache

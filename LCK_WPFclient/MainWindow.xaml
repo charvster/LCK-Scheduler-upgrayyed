@@ -1,0 +1,79 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Views="clr-namespace:LCK_WPFclient.Views" 
+        xmlns:Custom="clr-namespace:LCK_WPFclient.CustomControls"
+        x:Class="LCK_WPFclient.MainWindow"
+        Title="Scheduler Upgrayyed" Height="750" Width="1350" MaxHeight="750" MaxWidth="1350" WindowState="Maximized">
+    <Window.Resources>
+        <Style x:Key="AdminButton" TargetType="{x:Type Button}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding HasAdminRights}" Value="false">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding HasAdminRights}" Value="true">
+                    <Setter Property="Visibility" Value="Visible"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Margin="10,10,0,2" Width="186">
+            <Grid>
+                <Label Content="Store:" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="51"/>
+                <!--<ComboBox ItemsSource="{Binding Stores}" SelectedItem="{Binding SelectedStore}" HorizontalAlignment="Right" Height="27" Margin="0,9,5,0" VerticalAlignment="Top" Width="93"/>-->
+                <StackPanel>
+                    <Calendar Name="calSelectDay" SelectedDate="{Binding SelectedDate}" SelectedDatesChanged="Calendar_SelectedDatesChanged" Height="154" VerticalAlignment="Top" Margin="5,41,5,0" FirstDayOfWeek="Monday"/>
+                    <Button Content="Today" Margin="5,0" Click="btnToday_Click"/>
+                </StackPanel>
+                <Button Content="Flavor Editor" Style="{StaticResource AdminButton}" HorizontalAlignment="Left" Height="38" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="164" Click="btnFlavorEditor_Click"/>
+                <Label Content="{Binding SelectedStore.Name}" HorizontalAlignment="Left" Height="36" Margin="60,5,0,0" VerticalAlignment="Top" Width="118" FontSize="19"/>
+                <Button Content="Cake Editor" Style="{StaticResource AdminButton}" HorizontalAlignment="Left" Height="38" Margin="10,0,0,53" VerticalAlignment="Bottom" Width="164" Click="btnCakeEditor_Click"/>
+                <Button Content="New Orders" Height="38" Margin="10,250,0,0" VerticalAlignment="Top" Click="btnNewOrders_Click" HorizontalAlignment="Left" Width="164" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding NewOrdersAvailable}" Value="true">
+                                    <Setter Property="Background" Value="LimeGreen"/>
+                                </DataTrigger>
+                                <!--<DataTrigger Binding="{Binding NewOrdersAvailable}" Value="false">
+                                    <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}"/>
+                                </DataTrigger>-->
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>                  
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="201,10,10,2">
+            <DockPanel LastChildFill="True" Margin="1,-1,-1,-1">
+                <Views:DayView DataContext="{Binding SelectedDay}" Height="Auto" Width="Auto" Margin="0"/>
+            </DockPanel>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="10,5,10,10" Grid.Row="1">
+            <Grid >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Views:DayPreviewView DataContext="{Binding DayInfoPreviews[0]}" Height="Auto" Width="Auto" Margin="0" />
+                <Views:DayPreviewView DataContext="{Binding DayInfoPreviews[1]}" Grid.Column="1" Height="Auto" Width="Auto" Margin="0"/>
+                <Views:DayPreviewView DataContext="{Binding DayInfoPreviews[2]}" Grid.Column="2" Height="Auto" Width="Auto" Margin="0"/>
+                <Views:DayPreviewView DataContext="{Binding DayInfoPreviews[3]}" Grid.Column="3" Height="Auto" Width="Auto" Margin="0"/>
+                <Views:DayPreviewView DataContext="{Binding DayInfoPreviews[4]}" Grid.Column="4" Height="Auto" Width="Auto" Margin="0"/>
+                <Views:DayPreviewView DataContext="{Binding DayInfoPreviews[5]}" Grid.Column="5" Height="Auto" Width="Auto" Margin="0"/>
+                <Views:DayPreviewView DataContext="{Binding DayInfoPreviews[6]}" Grid.Column="6" Height="Auto" Width="Auto" Margin="0"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

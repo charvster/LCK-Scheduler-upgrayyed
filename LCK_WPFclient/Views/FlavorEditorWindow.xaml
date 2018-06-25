@@ -20,14 +20,15 @@
             </ListView.View>
         </ListView>
         <Label Content="Name:" HorizontalAlignment="Left" Height="25" Margin="10,0,0,298" VerticalAlignment="Bottom" Width="52"/>
-        <TextBox Name="txtName" HorizontalAlignment="Left" Height="25" Margin="10,0,0,273" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="193"/>
-        <Label Content="Descripton:" HorizontalAlignment="Left" Height="25" Margin="10,0,0,224" VerticalAlignment="Bottom" Width="74"/>
-        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="114" Margin="10,0,0,110" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="193"/>
+        <TextBox Name="txtName" HorizontalAlignment="Left" Height="25" Margin="10,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="193"/>
+        <Label Content="Descripton:" HorizontalAlignment="Left" Height="25" Margin="10,0,0,199" VerticalAlignment="Bottom" Width="74"/>
+        <TextBox x:Name="txtDescription" HorizontalAlignment="Left" Height="114" Margin="10,0,0,85" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom" Width="193"/>
         <Button Content="Close" HorizontalAlignment="Left" Height="27" Margin="10,0,0,12" VerticalAlignment="Bottom" Width="52" Click="btnClose_Click"/>
-        <Button Name="btnAdd_Update" Content="Add" Height="27" Margin="10,0,0,78" VerticalAlignment="Bottom" Click="btnAdd_Update_Click" HorizontalAlignment="Left" Width="52"/>
-        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Height="27" Margin="151,0,0,78" VerticalAlignment="Bottom" Width="52" Click="btnClear_Click"/>
-        <CheckBox x:Name="chkNotAFlavor" Content="Not A Flavor?" HorizontalAlignment="Left" Height="25" Margin="10,65,0,0" VerticalAlignment="Top" Width="90"/>
-        <CheckBox x:Name="chkCakeFlavor" Content="Cake Flavor?" HorizontalAlignment="Left" Height="25" Margin="119,65,0,0" VerticalAlignment="Top" Width="84"/>
+        <Button Name="btnAdd_Update" Content="Add" Height="27" Margin="10,0,0,54" VerticalAlignment="Bottom" Click="btnAdd_Update_Click" HorizontalAlignment="Left" Width="52"/>
+        <Button x:Name="btnClear" Content="Clear" HorizontalAlignment="Left" Height="27" Margin="151,0,0,54" VerticalAlignment="Bottom" Width="52" Click="btnClear_Click"/>
+        <CheckBox x:Name="chkNotAFlavor" Content="Not A Flavor?" HorizontalAlignment="Left" Height="25" Margin="10,60,0,0" VerticalAlignment="Top" Width="95"/>
+        <CheckBox x:Name="chkCakeFlavor" Content="Cake Flavor?" HorizontalAlignment="Left" Height="25" Margin="110,60,0,0" VerticalAlignment="Top" Width="93"/>
+        <CheckBox x:Name="chkInvisible" Content="Invisible?" HorizontalAlignment="Left" Height="25" Margin="10,80,0,0" VerticalAlignment="Top" Width="90"/>
 
     </Grid>
 </Window>

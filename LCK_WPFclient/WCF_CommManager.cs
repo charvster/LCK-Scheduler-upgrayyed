@@ -436,7 +436,8 @@ namespace LCK_WPFclient
 
         private void ReSyncGlobalVariables()
         {
-            Globals.AllFlavors = lck_Comm.GetAllFlavors();
+            //Globals.AllFlavors = lck_Comm.GetAllFlavors();
+            Globals.AllFlavors = lck_Comm.GetVisibleFlavors();
             Globals.AllStores = lck_Comm.GetAllStores();
             Globals.AllCakes = lck_Comm.GetAllCakes();
             Globals.AllCakeFlavors = lck_Comm.GetAllCakeFlavors();

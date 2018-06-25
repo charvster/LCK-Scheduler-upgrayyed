@@ -687,3 +687,13 @@ Parameter name: source
 4/18/2018 07:27:36.815 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllStores() - Error msg:There was no endpoint listening at http://localhost:6790/lck that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
 4/18/2018 07:27:57.835 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllStores() - Error msg:There was no endpoint listening at http://192.168.1.64:6790/lck that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
 4/18/2018 07:28:18.861 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllStores() - Error msg:There was no endpoint listening at http://littlecakes.ddns.net:6790/lck that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+6/24/2018 06:45:45.334 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllFlavors() - Error msg:Failed to compare two elements in the array.
+6/24/2018 06:51:23.080 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllFlavors() - Error msg:Unable to cast object of type 'System.Linq.OrderedEnumerable`2[LCK_ClientLibrary.FlavorWPF,System.String]' to type 'System.Collections.Generic.List`1[LCK_ClientLibrary.FlavorWPF]'.
+6/24/2018 08:24:46.549 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllFlavors() - Error msg:Value cannot be null.
+Parameter name: source
+6/24/2018 08:24:47.179 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllCakeFlavors() - Error msg:Value cannot be null.
+Parameter name: source
+6/24/2018 08:24:47.448 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetNewOrders() - Error msg:Value cannot be null.
+Parameter name: source
+6/24/2018 08:24:47.806 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetDayInfo(string,bool) - Error msg:Object reference not set to an instance of an object.
+6/24/2018 08:24:48.108 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetDayInfo(string,bool) - Error msg:Object reference not set to an instance of an object.

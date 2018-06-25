@@ -60,11 +60,17 @@ namespace LCK_WPFclient.Views
             txtDescription.Text = (lvwFlavors.SelectedItem as FlavorWPF).Description;
             chkNotAFlavor.IsChecked = (lvwFlavors.SelectedItem as FlavorWPF).NotAflavor;
             chkCakeFlavor.IsChecked = (lvwFlavors.SelectedItem as FlavorWPF).CakeFlavor;
+            chkInvisible.IsChecked = (lvwFlavors.SelectedItem as FlavorWPF).Invisible;
 
             btnAdd_Update.Content = "Update";
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            ClearUI();
+        }
+
+        private void ClearUI()
         {
             txtName.Text = "";
             txtDescription.Text = "";
@@ -84,6 +90,7 @@ namespace LCK_WPFclient.Views
             flav.Description = txtDescription.Text;
             flav.NotAflavor = (bool)chkNotAFlavor.IsChecked;
             flav.CakeFlavor = (bool)chkCakeFlavor.IsChecked;
+            flav.Invisible = (bool)chkInvisible.IsChecked;
 
             if(btnAdd_Update.Content.ToString() == "Add")
             {
@@ -98,6 +105,7 @@ namespace LCK_WPFclient.Views
                 lck_comm.UpdateFlavor(flav.ID, flav);
             }
 
+            ClearUI();
             RefreshFlavors();
         }
 

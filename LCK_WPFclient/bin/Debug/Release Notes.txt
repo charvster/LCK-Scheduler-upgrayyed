@@ -3,6 +3,9 @@ v1.6 - Released #/##/####
 	- made icon bigger - 10/8/2017
 	- after Special Order edit, the SO now goes into NewOrder queue - 4/2/2018
 	- fixed error on connect popup not sticking around long enough to read - 4/14/2018
+	- changed SO Orders UI and Day preview UI to count 'Not a Flavor' flavors in their 'Full' quantity - 6/24/2018
+	- added 'Invisible' flag to Flavor object that when True/checked in Flavor editor UI will hide that flavor in all dropdowns - 6/24/2018
+	- sorted flavors in Flavor Editor - 6/24/2018
 
 ******************************************************************
 v1.5 - Released 10/5/2017

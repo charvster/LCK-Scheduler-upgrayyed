@@ -39,6 +39,31 @@ namespace LCK_ClientLibrary
                 foreach (Flavor flav in flavs)
                     flavWPFs.Add(new FlavorWPF(flav));
 
+                // order output list alphabetically
+                flavWPFs = flavWPFs.OrderBy(p => p.Name).ToList();
+
+                return flavWPFs;
+            }
+            catch (Exception ex)
+            {
+                Log("GetAllFlavors() - Error msg:" + ex.Message);
+                return null;
+            }
+        }
+
+        public List<FlavorWPF> GetVisibleFlavors()
+        {
+            try
+            {
+                List<FlavorWPF> flavWPFs = new List<FlavorWPF>();
+                List<Flavor> flavs = lck.GetAllFlavors().ToList();
+
+                foreach (Flavor flav in flavs)
+                {
+                    if(!flav.Invisible)
+                        flavWPFs.Add(new FlavorWPF(flav));
+                }
+
                 return flavWPFs;
             }
             catch (Exception ex)

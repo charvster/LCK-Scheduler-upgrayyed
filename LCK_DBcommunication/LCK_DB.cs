@@ -40,6 +40,7 @@ namespace LCK_DBcommunication
                     flav.Description = rdr["description"].ToString();
                     flav.NotAFlavor = bool.Parse(rdr["not_a_flavor"].ToString());
                     flav.CakeFlavor = bool.Parse(rdr["cake_flavor"].ToString());
+                    flav.Invisible = bool.Parse(rdr["invisible"].ToString());
                     if (closeDB)
                         dbComm.Close();
 
@@ -69,6 +70,7 @@ namespace LCK_DBcommunication
                         flav.Description = rdr["Description"].ToString();
                         flav.NotAFlavor = bool.Parse(rdr["not_a_flavor"].ToString());
                         flav.CakeFlavor = bool.Parse(rdr["cake_flavor"].ToString());
+                        flav.Invisible = bool.Parse(rdr["invisible"].ToString());
                         flavors.Add(flav);
                     }
                     dbComm.Close();
@@ -686,6 +688,7 @@ namespace LCK_DBcommunication
                 data.Add("description", updateFlavor.Description);
                 data.Add("not_a_flavor", updateFlavor.NotAFlavor.ToString());
                 data.Add("cake_flavor", updateFlavor.CakeFlavor.ToString());
+                data.Add("invisible", updateFlavor.Invisible.ToString());
 
                 dbComm.Update("Flavor", data, String.Format("id = {0}", Flavor_ID));
                 return true;

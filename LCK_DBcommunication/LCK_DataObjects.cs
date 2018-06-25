@@ -21,6 +21,8 @@ namespace LCK_DBcommunication.LCK_DataObjects
         public bool NotAFlavor { get; set; }
         [DataMember]
         public bool CakeFlavor { get; set; }
+        [DataMember]
+        public bool Invisible { get; set; }
     }
 
     [DataContract]

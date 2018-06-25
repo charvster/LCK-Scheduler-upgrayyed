@@ -32,6 +32,9 @@ namespace LCK_ClientLibrary.LCK_ServiceReference {
         private int IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool InvisibleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -82,6 +85,19 @@ namespace LCK_ClientLibrary.LCK_ServiceReference {
                 if ((this.IDField.Equals(value) != true)) {
                     this.IDField = value;
                     this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Invisible {
+            get {
+                return this.InvisibleField;
+            }
+            set {
+                if ((this.InvisibleField.Equals(value) != true)) {
+                    this.InvisibleField = value;
+                    this.RaisePropertyChanged("Invisible");
                 }
             }
         }

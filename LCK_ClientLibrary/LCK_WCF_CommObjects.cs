@@ -461,6 +461,13 @@ namespace LCK_ClientLibrary
             set { _cakeFlavor = value; NotifyPropertyChanged("CakeFlavor"); }
         }
 
+        private bool _invisible;
+        public bool Invisible
+        {
+            get { return _invisible; }
+            set { _invisible = value; NotifyPropertyChanged("Invisible"); }
+        }
+
         public FlavorWPF()
         { }
 
@@ -471,6 +478,7 @@ namespace LCK_ClientLibrary
             this.Description = flav.Description;
             this.NotAflavor = flav.NotAFlavor;
             this.CakeFlavor = flav.CakeFlavor;
+            this.Invisible = flav.Invisible;
         }
 
         public Flavor ToFlavor()
@@ -481,6 +489,7 @@ namespace LCK_ClientLibrary
             flav.Description = this.Description;
             flav.NotAFlavor = this.NotAflavor;
             flav.CakeFlavor = this.CakeFlavor;
+            flav.Invisible = this.Invisible;
             return flav;
         }
 
@@ -1093,7 +1102,7 @@ namespace LCK_ClientLibrary
                 int count = 0;
                 foreach(SO_BatchWPF bat in Batches)
                 {
-                    if ((!bat.IsMini) && (!bat.Flavor.NotAflavor))
+                    if ((!bat.IsMini)) // && (!bat.Flavor.NotAflavor))
                         count += bat.Quantity;
                 }
                 return count;

@@ -1,6 +1,0 @@
-﻿
-v1.1 - moved ConfigSettings_Static from LCK_WPFClient project into this project and 
-			made reference to it from LCK_WPFClient
-
-***************************************************************************
-v1.0 Initial Release [##/##/####]

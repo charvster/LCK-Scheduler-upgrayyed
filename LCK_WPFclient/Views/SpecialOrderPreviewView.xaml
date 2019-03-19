@@ -3,26 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" d:DesignHeight="75" d:DesignWidth="362">
+             mc:Ignorable="d" d:DesignHeight="75" d:DesignWidth="425">
     <Grid>
         <Border BorderThickness="1" BorderBrush="Black" CornerRadius="10" Margin="1,1,1,1">
             <Grid>
                 <Label Content="Due Time:" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="65"/>
-                <TextBlock Text="{Binding DueTimeUI}" Width="70" Height="27" Margin="65,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="{Binding DueTimeUI}" Height="27" Margin="65,5,261,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 <Label Content="Customer:" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="65" Margin="0,22,0,0"/>
                 <!--<TextBlock Text="{Binding Customer_Name}" Width="116" Height="32" Margin="65,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>-->
-                <Border BorderBrush="{x:Null}" Height="32" Margin="65,19,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="121">
+                <Border BorderBrush="{x:Null}" Height="32" Margin="65,19,210,0" VerticalAlignment="Top">
                     <TextBlock Text="{Binding Customer_Name}" 
                        FontSize="12" TextWrapping="Wrap" VerticalAlignment="Center" />
                 </Border>
                 <Label Content="Delivery:" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="65" Margin="0,45,0,-1"/>
-                <TextBlock Text="{Binding DeliverUI}" Width="70" Height="27" Margin="65,50,0,-6" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <Label Content="Full Size:" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="65" Margin="186,0,0,0"/>
-                <TextBlock Text="{Binding FullSizeCount}" Width="70" Height="27" Margin="250,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <Label Content="Mini Size:" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="65" Margin="186,22,0,0"/>
-                <TextBlock Text="{Binding MiniSizeCount}" Width="70" Height="27" Margin="250,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-                <Label Content="Cakes:" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="65" Margin="186,45,0,-1"/>
-                <TextBlock Text="{Binding CakeCount}" Width="70" Height="27" Margin="250,50,0,-6" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                <TextBlock Text="{Binding DeliverUI}" Height="27" Margin="65,50,261,-6" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <Label Content="Full Size:" HorizontalAlignment="Right" Height="27" VerticalAlignment="Top" Width="65" Margin="0,0,107,0"/>
+                <TextBlock Text="{Binding FullSizeCount}" Width="70" Height="27" Margin="0,5,38,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <Label Content="Mini Size:" HorizontalAlignment="Right" Height="27" VerticalAlignment="Top" Width="65" Margin="0,22,107,0"/>
+                <TextBlock Text="{Binding MiniSizeCount}" Width="70" Height="27" Margin="0,27,38,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+                <Label Content="Cakes:" HorizontalAlignment="Right" Height="27" VerticalAlignment="Top" Width="65" Margin="0,45,107,-1"/>
+                <TextBlock Text="{Binding CakeCount}" Width="70" Height="27" Margin="0,50,38,-6" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right"/>
             </Grid>
         </Border>
     </Grid>

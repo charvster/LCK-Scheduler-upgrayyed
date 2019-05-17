@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 using System.Net;
 using System.Net.Sockets;
@@ -36,12 +37,31 @@ namespace LCK_WCFsysTrayHost
 
         private static ServiceHost Sh = null;
 
+        private string settingsFilename = AppDomain.CurrentDomain.BaseDirectory + "config.xml";
+        private static Settings localSettings = new Settings();
+        public static string LocalPort
+        {
+            get { return localSettings.LocalPort; }
+        }
+
+        public static string BaseAddress
+        {
+            get { return @"http://localhost:" + LocalPort + @"/lck"; }
+        }
+
+        public static string MexAddress
+        {
+            get { return @"http://localhost:" + LocalPort + @"/mex"; }
+        }
+
 		/// <summary>
 		/// Creates this instance.
 		/// </summary>
 		/// <returns>ContextMenuStrip</returns>
 		public ContextMenuStrip Create()
 		{
+            LoadSettings(settingsFilename);
+
             // Init Service first so values are updated for BuildMenu items
             InitServiceHost();
             
@@ -145,8 +165,8 @@ namespace LCK_WCFsysTrayHost
 
         static void InitServiceHost()
         {
-            Uri httpBaseAddress = new Uri("http://localhost:6790/lck");
-            string mexAddr = "http://localhost:6790/lck/mex";
+            Uri httpBaseAddress = new Uri(BaseAddress);
+            string mexAddr = MexAddress;
 
             // declare for both
             Sh = new ServiceHost(typeof(LCK_Service), httpBaseAddress);
@@ -197,6 +217,32 @@ namespace LCK_WCFsysTrayHost
             catch (Exception ex)
             {
                 return "0.0.0.0";
+            }
+        }
+
+        private bool LoadSettings(string filename)
+        {
+            if (!File.Exists(filename)) return false;
+            try
+            {
+                XmlSerializer deserializer = new XmlSerializer(typeof(Settings));
+                TextReader reader = new StreamReader(filename);
+                object obj = deserializer.Deserialize(reader);
+                localSettings = (Settings)obj;
+                // manually set values so globals they point to get updated
+                //localSettings.LocalPort = localSettings.LocalPort;
+                reader.Close();
+
+                //SelectedStore = lck_Comm.GetStoreInfo(Settings.StoreID);
+
+                Log("Config Load Successful. Filename: " + filename);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log("Config Load Unsuccessful. Filename: " + filename + " ErrorMsg=" + ex.Message);
+                return false;
             }
         }
 

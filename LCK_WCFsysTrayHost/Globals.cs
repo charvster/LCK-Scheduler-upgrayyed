@@ -13,4 +13,13 @@ namespace LCK_WCFsysTrayHost
         public static string LocalIP;
         public static string LocalPort = "6790";
     }
+
+    public class Settings
+    {
+        public string LocalPort
+        {
+            get { return Globals.LocalPort; }
+            set { Globals.LocalPort = value; }
+        }
+    }
 }

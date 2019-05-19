@@ -1,5 +1,5 @@
 ﻿
-v1.6 - Released #/##/####
+v1.6 - Released 6/24/2018
 	- made icon bigger - 10/8/2017
 	- after Special Order edit, the SO now goes into NewOrder queue - 4/2/2018
 	- fixed error on connect popup not sticking around long enough to read - 4/14/2018

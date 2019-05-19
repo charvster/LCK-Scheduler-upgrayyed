@@ -4,5 +4,5 @@
   <AdminRights>true</AdminRights>
   <ScanOrderDefaultPath />
   <RefreshInterval>600000</RefreshInterval>
-  <EndpointAddress>endpoint_ddns</EndpointAddress>
+  <EndpointAddress>endpoint_localhost</EndpointAddress>
 </ConfigSettings>

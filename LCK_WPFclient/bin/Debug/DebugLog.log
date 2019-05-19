@@ -697,3 +697,5 @@ Parameter name: source
 Parameter name: source
 6/24/2018 08:24:47.806 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetDayInfo(string,bool) - Error msg:Object reference not set to an instance of an object.
 6/24/2018 08:24:48.108 PM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetDayInfo(string,bool) - Error msg:Object reference not set to an instance of an object.
+5/18/2019 11:50:53.516 AM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllStores() - Error msg:There was no endpoint listening at http://localhost:6790/lck that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.
+5/18/2019 11:50:55.521 AM[Debug] [LCK_WPFClient.LCK_WCFcommunication] - GetAllStores() - Error msg:There was no endpoint listening at http://localhost:6790/lck that could accept the message. This is often caused by an incorrect address or SOAP action. See InnerException, if present, for more details.

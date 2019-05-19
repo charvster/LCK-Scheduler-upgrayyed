@@ -33,7 +33,7 @@
                 <Button Content="Flavor Editor" Style="{StaticResource AdminButton}" HorizontalAlignment="Left" Height="38" Margin="10,0,0,10" VerticalAlignment="Bottom" Width="164" Click="btnFlavorEditor_Click"/>
                 <Label Content="{Binding SelectedStore.Name}" HorizontalAlignment="Left" Height="36" Margin="60,5,0,0" VerticalAlignment="Top" Width="118" FontSize="19"/>
                 <Button Content="Cake Editor" Style="{StaticResource AdminButton}" HorizontalAlignment="Left" Height="38" Margin="10,0,0,53" VerticalAlignment="Bottom" Width="164" Click="btnCakeEditor_Click"/>
-                <Button Content="New Orders" Height="38" Margin="10,250,0,0" VerticalAlignment="Top" Click="btnNewOrders_Click" HorizontalAlignment="Left" Width="164" >
+                <Button IsEnabled="False" Content="New Orders" Height="38" Margin="10,250,0,0" VerticalAlignment="Top" Click="btnNewOrders_Click" HorizontalAlignment="Left" Width="164" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>

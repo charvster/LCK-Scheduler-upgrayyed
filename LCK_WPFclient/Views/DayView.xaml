@@ -54,7 +54,7 @@
                         <ColumnDefinition Width="1*" />
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
-                    <Label Content="Vista" Grid.Column="0" Height="28" VerticalAlignment="Top" Margin="2,-3,2,0" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                    <Label Content="Wholesale" Grid.Column="0" Height="28" VerticalAlignment="Top" Margin="2,-3,2,0" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
                     <ListView ItemsSource="{Binding OrdersVista}" SelectedItem="{Binding SelectedSO}" MouseDoubleClick="lvwVista_MouseDoubleClick" Grid.Column="0" Margin="2,25,2,32" Height="Auto">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -62,7 +62,7 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    <Label Content="Carlsbad" Grid.Column="1" Height="28" VerticalAlignment="Top" Margin="2,-3,2,0" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
+                    <Label Content="On-Site" Grid.Column="1" Height="28" VerticalAlignment="Top" Margin="2,-3,2,0" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold"/>
                     <ListView ItemsSource="{Binding OrdersCarlsbad}" SelectedItem="{Binding SelectedSO}" MouseDoubleClick="lvwCarlsbad_MouseDoubleClick" Margin="2,25,2,32" Height="Auto" Grid.Column="1">
                         <ListView.ItemTemplate>
                             <DataTemplate>
